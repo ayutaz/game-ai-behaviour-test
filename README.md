@@ -1,7 +1,8 @@
-# UnityTemplateRepository
-Unity Project template Repository
+# game-ai-behaviour-test
+
+[game-ai-behaviour](https://github.com/ayutaz/game-ai-behaviour-test)を使ったAIの挙動テスト
 
 # Demo
 
 # requirements
-* Unity 2022.2.0f1
+* Unity 2021.3.25f1
