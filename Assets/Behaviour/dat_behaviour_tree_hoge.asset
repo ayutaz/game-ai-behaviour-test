@@ -13,12 +13,14 @@ MonoBehaviour:
   m_Name: SequencerNode
   m_EditorClassIdentifier: 
   guid: 873203732433a6f47b926ac18230ef1b
-  position: {x: 17.000004, y: 137.80753}
+  position: {x: 358.00006, y: 98.67793}
   title: 
   children:
-  - {fileID: -3272990643544390542}
-  - {fileID: -4294348379472300865}
---- !u!114 &-4294348379472300865
+  - {fileID: 8524330382828248457}
+  - {fileID: -3947593564855503111}
+  - {fileID: -6217976962432492592}
+  - {fileID: -5659495328635895347}
+--- !u!114 &-6217976962432492592
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
@@ -27,31 +29,51 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4c2cf769ece98d749b8dfeccca27e99e, type: 3}
-  m_Name: FunctionNode
+  m_Script: {fileID: 11500000, guid: 19d22ea35759428d86f00959c0fae1ff, type: 3}
+  m_Name: MoveNode
   m_EditorClassIdentifier: 
-  guid: 266f86c4a144e9945aadf4355b71532b
-  position: {x: 167.00002, y: 277.65002}
-  title: Move
-  functionRoot: {fileID: 0}
---- !u!114 &-3272990643544390542
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 02751b745a0a64ae8a46d045246f2b11, type: 3}
-  m_Name: LogNode
-  m_EditorClassIdentifier: 
-  guid: 04e34b472b779324eb5b5e5eaa2d8c01
-  position: {x: -120.10202, y: 281.90005}
-  title: Log
+  guid: 58cee04270c8cf148bd5c86f4096191c
+  position: {x: 358.4033, y: 273}
+  title: LeftMove
   subRoutine: {fileID: 0}
-  logType: 3
-  text: Hello World
+  offset: {x: -1, y: 0, z: 0}
+  duration: 1
+--- !u!114 &-5659495328635895347
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 19d22ea35759428d86f00959c0fae1ff, type: 3}
+  m_Name: MoveNode
+  m_EditorClassIdentifier: 
+  guid: c6dc41b1aace409489cd6bf4794ed5fa
+  position: {x: 574.7153, y: 273}
+  title: DownMove
+  subRoutine: {fileID: 0}
+  offset: {x: 0, y: -1, z: 0}
+  duration: 1
+--- !u!114 &-3947593564855503111
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 19d22ea35759428d86f00959c0fae1ff, type: 3}
+  m_Name: MoveNode
+  m_EditorClassIdentifier: 
+  guid: fd3097c69f5c7794890d49be347da890
+  position: {x: 153.2, y: 273}
+  title: UpMove
+  subRoutine: {fileID: 0}
+  offset: {x: 0, y: 1, z: 0}
+  duration: 1
 --- !u!114 &11400000
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -68,10 +90,30 @@ MonoBehaviour:
   rootNode: {fileID: 8527279488153828387}
   nodes:
   - {fileID: 8527279488153828387}
-  - {fileID: -3272990643544390542}
-  - {fileID: -4294348379472300865}
   - {fileID: -7195333700805447320}
+  - {fileID: 8524330382828248457}
+  - {fileID: -3947593564855503111}
+  - {fileID: -6217976962432492592}
+  - {fileID: -5659495328635895347}
   blackboardAsset: {fileID: 11400000, guid: d5662a29726db5e4bbda894445daa9bb, type: 2}
+--- !u!114 &8524330382828248457
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 19d22ea35759428d86f00959c0fae1ff, type: 3}
+  m_Name: MoveNode
+  m_EditorClassIdentifier: 
+  guid: 6d6dc7775e832964aba15f6aa40f06e5
+  position: {x: -89.72, y: 273}
+  title: RIghtMove
+  subRoutine: {fileID: 0}
+  offset: {x: 1, y: 0, z: 0}
+  duration: 1
 --- !u!114 &8527279488153828387
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -85,6 +127,6 @@ MonoBehaviour:
   m_Name: RootNode
   m_EditorClassIdentifier: 
   guid: b1794c0857d22af4c97424106302c017
-  position: {x: 17, y: -7}
+  position: {x: 358.00006, y: -46.322044}
   title: Root
   child: {fileID: -7195333700805447320}

@@ -1,27 +1,42 @@
 ﻿using System;
 using GameAiBehaviour;
+using NaughtyAttributes;
 using UnityEngine;
 
-public class CircleController : MonoBehaviour
+public class CircleController : MonoBehaviour,IBehaviourTreeControllerProvider
 {
     private BehaviourTreeController _controller;
-    [SerializeField] private BehaviourTree behaviourTree;
+    [SerializeField,Label("実行対象のツリー")] private BehaviourTree behaviourTree;
+    
+    [SerializeField,Label("試行頻度")]
+    private float tickInterval = 1.0f;
+
+    [SerializeField] private Agent agent;
+    BehaviourTreeController IBehaviourTreeControllerProvider.BehaviourTreeController => _controller;
 
     private void Awake()
-    
     {
         _controller = new BehaviourTreeController();
-        _controller.TickInterval = 1.0f;
+        _controller.TickInterval = tickInterval;
         _controller.Setup(behaviourTree);
     }
 
     private void Start()
     {
-        _controller.Update(Time.deltaTime);
+        _controller.BindActionNodeHandler<MoveNode,MoveNodeHandler>(handler =>
+        {
+            handler.Setup(agent);
+        });
     }
 
     private void Update()
     {
-        // _controller.Update(Time.deltaTime);
+        _controller.Update(Time.deltaTime);
+    }
+
+    private void OnDestroy()
+    {
+        _controller.ResetActionNodeHandlers();
+        _controller.Cleanup();
     }
 }
