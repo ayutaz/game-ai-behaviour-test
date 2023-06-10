@@ -4,6 +4,8 @@
 
 # Demo
 
+https://github.com/ayutaz/game-ai-behaviour-test/blob/main/Docs/movie_002.mp4
+
 [Demo Page](https://ayutaz.github.io/game-ai-behaviour-test/WebGL/)
 
 # requirements
