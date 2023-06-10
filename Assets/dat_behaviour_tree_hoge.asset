@@ -1,0 +1,90 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &-7195333700805447320
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dbe1dcdbfdacd874c896be43fbb7c097, type: 3}
+  m_Name: SequencerNode
+  m_EditorClassIdentifier: 
+  guid: 873203732433a6f47b926ac18230ef1b
+  position: {x: 17.000004, y: 137.80753}
+  title: 
+  children:
+  - {fileID: -3272990643544390542}
+  - {fileID: -4294348379472300865}
+--- !u!114 &-4294348379472300865
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4c2cf769ece98d749b8dfeccca27e99e, type: 3}
+  m_Name: FunctionNode
+  m_EditorClassIdentifier: 
+  guid: 266f86c4a144e9945aadf4355b71532b
+  position: {x: 167.00002, y: 277.65002}
+  title: Move
+  functionRoot: {fileID: 0}
+--- !u!114 &-3272990643544390542
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 02751b745a0a64ae8a46d045246f2b11, type: 3}
+  m_Name: LogNode
+  m_EditorClassIdentifier: 
+  guid: 04e34b472b779324eb5b5e5eaa2d8c01
+  position: {x: -120.10202, y: 281.90005}
+  title: Log
+  subRoutine: {fileID: 0}
+  logType: 3
+  text: Hello World
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 14c4b5c83ab7686489f1b4fa4ca9532e, type: 3}
+  m_Name: dat_behaviour_tree_hoge
+  m_EditorClassIdentifier: 
+  memo: 
+  rootNode: {fileID: 8527279488153828387}
+  nodes:
+  - {fileID: 8527279488153828387}
+  - {fileID: -3272990643544390542}
+  - {fileID: -4294348379472300865}
+  - {fileID: -7195333700805447320}
+  blackboardAsset: {fileID: 11400000, guid: d5662a29726db5e4bbda894445daa9bb, type: 2}
+--- !u!114 &8527279488153828387
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f20ca020fcdcbff4cb6cf4a92eb703db, type: 3}
+  m_Name: RootNode
+  m_EditorClassIdentifier: 
+  guid: b1794c0857d22af4c97424106302c017
+  position: {x: 17, y: -7}
+  title: Root
+  child: {fileID: -7195333700805447320}
