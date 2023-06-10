@@ -1,4 +1,5 @@
 ﻿using System;
+using DefaultNamespace;
 using GameAiBehaviour;
 using NaughtyAttributes;
 using UnityEngine;
@@ -14,8 +15,10 @@ public class CircleController : MonoBehaviour,IBehaviourTreeControllerProvider
     [SerializeField] private Agent agent;
     BehaviourTreeController IBehaviourTreeControllerProvider.BehaviourTreeController => _controller;
 
+    private SpriteRenderer _spriteRenderer;
     private void Awake()
     {
+        _spriteRenderer = GetComponent<SpriteRenderer>();
         _controller = new BehaviourTreeController();
         _controller.TickInterval = tickInterval;
         _controller.Setup(behaviourTree);
@@ -27,6 +30,8 @@ public class CircleController : MonoBehaviour,IBehaviourTreeControllerProvider
         {
             handler.Setup(agent);
         });
+        
+        _controller.BindActionNodeHandler<ColorNode,ColorNodeHandler>(handler => handler.Setup(agent,_spriteRenderer));
     }
 
     private void Update()
