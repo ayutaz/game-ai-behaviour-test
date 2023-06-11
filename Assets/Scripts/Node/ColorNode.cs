@@ -18,6 +18,7 @@ namespace Node
     public class ColorNodeHandler : NodeBaseHandler<ColorNode>
     {
         private SpriteRenderer _spriteRenderer;
+        private RotatingObjectAgent _owner;
 
         public void Setup(RotatingObjectAgent owner, SpriteRenderer spriteRenderer)
         {

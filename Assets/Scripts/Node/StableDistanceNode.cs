@@ -13,16 +13,22 @@ namespace Node
     public class StableDistanceNodeHandler : NodeBaseHandler<StableDistanceNode>
     {
         private Transform _targetTransform;
-        
-        public void Setup(RotatingObjectAgent rotatingObjectAgent, Transform targetTransform)
+        private EnemyAgent _agent;
+
+        public void Setup(EnemyAgent agent)
         {
-            _owner = rotatingObjectAgent;
+            _agent = agent;
+        }
+
+        public void Setup(EnemyAgent enemyAgent, Transform targetTransform)
+        {
+            _agent = enemyAgent;
             this._targetTransform = targetTransform;
         }
         protected override bool OnEnterInternal(StableDistanceNode node)
         {
             _cancellationTokenSource = new CancellationTokenSource();
-            _uniTask = _owner.StableDistanceAsync(_targetTransform,node.distance, _cancellationTokenSource.Token);
+            _uniTask = _agent.StableDistanceAsync(_targetTransform,node.distance, _cancellationTokenSource.Token);
             return true;
         }
     }

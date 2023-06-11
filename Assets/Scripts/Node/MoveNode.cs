@@ -1,4 +1,5 @@
 ﻿using System.Threading;
+using Agents;
 using NaughtyAttributes;
 using UnityEngine;
 
@@ -12,6 +13,13 @@ namespace Node
 
     public class MoveNodeHandler : NodeBaseHandler<MoveNode>
     {
+        private RotatingObjectAgent _owner;
+        
+        public void Setup(RotatingObjectAgent owner)
+        {
+            _owner = owner;
+        }
+        
         /// <summary>
         /// ノード開始時処理
         /// </summary>

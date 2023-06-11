@@ -1,4 +1,5 @@
 ﻿using System.Threading;
+using Agents;
 using NaughtyAttributes;
 
 namespace Node
@@ -11,6 +12,12 @@ namespace Node
 
     public class CircleMoveHandler : NodeBaseHandler<CircleMoveNode>
     {
+        private RotatingObjectAgent _owner;
+        
+        public void Setup(RotatingObjectAgent owner)
+        {
+            _owner = owner;
+        }
         protected override bool OnEnterInternal(CircleMoveNode node)
         {
             _cancellationTokenSource = new CancellationTokenSource();

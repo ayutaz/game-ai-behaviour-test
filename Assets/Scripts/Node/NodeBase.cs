@@ -11,18 +11,8 @@ namespace Node
 
     public class NodeBaseHandler<T> : ActionNodeHandler<T> where T : NodeBase
     {
-        protected RotatingObjectAgent _owner;
         protected CancellationTokenSource _cancellationTokenSource;
         protected UniTask _uniTask;
-
-        /// <summary>
-        /// 初期化処理
-        /// </summary>
-        /// <param name="owner"></param>
-        public void Setup(RotatingObjectAgent owner)
-        {
-            _owner = owner;
-        }
 
         /// <summary>
         /// ノード開始時処理
