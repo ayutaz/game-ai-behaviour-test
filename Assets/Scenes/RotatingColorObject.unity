@@ -452,7 +452,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   behaviourTree: {fileID: 11400000, guid: c43afcff9b45ab946afefb15809493a6, type: 2}
   tickInterval: 1
-  agent: {fileID: 1037003006}
+  rotatingObjectAgent: {fileID: 1037003006}
 --- !u!114 &1037003006
 MonoBehaviour:
   m_ObjectHideFlags: 0

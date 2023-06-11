@@ -15,13 +15,14 @@ public class CircleController : MonoBehaviour,IBehaviourTreeControllerProvider
     [SerializeField,Label("試行頻度")]
     private float tickInterval = 1.0f;
 
-    [SerializeField] private RotatingObjectAgent rotatingObjectAgent;
+    private RotatingObjectAgent _rotatingObjectAgent;
     BehaviourTreeController IBehaviourTreeControllerProvider.BehaviourTreeController => _controller;
 
     private SpriteRenderer _spriteRenderer;
     private void Awake()
     {
         _spriteRenderer = GetComponent<SpriteRenderer>();
+        _rotatingObjectAgent = GetComponent<RotatingObjectAgent>();
         _controller = new BehaviourTreeController();
         _controller.TickInterval = tickInterval;
         _controller.Setup(behaviourTree);
@@ -31,7 +32,7 @@ public class CircleController : MonoBehaviour,IBehaviourTreeControllerProvider
     {
         _controller.BindActionNodeHandler<CircleMoveNode,CircleMoveHandler>(handler =>
         {
-            handler.Setup(rotatingObjectAgent);
+            handler.Setup(_rotatingObjectAgent);
         });
     }
 
