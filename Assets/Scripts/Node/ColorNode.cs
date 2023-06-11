@@ -5,11 +5,17 @@ using UnityEngine;
 
 namespace DefaultNamespace
 {
+    /// <summary>
+    /// 色の設定 Node
+    /// </summary>
     public class ColorNode : HandleableActionNode
     {
         [Label("色")] public Color color;
     }
 
+    /// <summary>
+    /// 指定した色に変更するNodeHandler
+    /// </summary>
     public class ColorNodeHandler : ActionNodeHandler<ColorNode>
     {
         private Agent _owner;
@@ -27,7 +33,7 @@ namespace DefaultNamespace
         /// </summary>
         protected override bool OnEnterInternal(ColorNode node)
         {
-            _owner.SetColor(_spriteRenderer, node.color);
+            Agent.SetColor(_spriteRenderer, node.color);
             return true;
         }
     }

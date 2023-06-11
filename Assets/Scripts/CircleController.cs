@@ -1,9 +1,11 @@
-﻿using System;
-using DefaultNamespace;
+﻿using DefaultNamespace;
 using GameAiBehaviour;
 using NaughtyAttributes;
 using UnityEngine;
 
+/// <summary>
+/// 回転するオブジェクトのコントローラー
+/// </summary>
 public class CircleController : MonoBehaviour,IBehaviourTreeControllerProvider
 {
     private BehaviourTreeController _controller;

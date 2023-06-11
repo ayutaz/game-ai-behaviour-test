@@ -58,5 +58,5 @@ public class Agent : MonoBehaviour
     /// </summary>
     /// <param name="spriteRenderer"></param>
     /// <param name="color"></param>
-    public void SetColor(SpriteRenderer spriteRenderer, Color color) => spriteRenderer.color = color;
+    public static void SetColor(SpriteRenderer spriteRenderer, Color color) => spriteRenderer.color = color;
 }
