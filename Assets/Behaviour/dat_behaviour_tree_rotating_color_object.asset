@@ -16,14 +16,10 @@ MonoBehaviour:
   position: {x: 358.00006, y: 98.67793}
   title: 
   children:
-  - {fileID: 5169767721535003786}
   - {fileID: 8524330382828248457}
   - {fileID: -3947593564855503111}
-  - {fileID: -1090907574096887057}
   - {fileID: -6217976962432492592}
-  - {fileID: 2250328294064230268}
   - {fileID: -5659495328635895347}
-  - {fileID: 6316046832315861510}
 --- !u!114 &-6217976962432492592
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -78,23 +74,6 @@ MonoBehaviour:
   subRoutine: {fileID: 0}
   offset: {x: 0, y: 1, z: 0}
   duration: 1
---- !u!114 &-1090907574096887057
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 61ec0473594445eea2079193215e9395, type: 3}
-  m_Name: ColorNode
-  m_EditorClassIdentifier: 
-  guid: 37bd98ef857a2a843a3d8a7c50c733ee
-  position: {x: 283, y: 399}
-  title: 
-  subRoutine: {fileID: 0}
-  color: {r: 1, g: 0, b: 0.9281521, a: 1}
 --- !u!114 &11400000
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -116,62 +95,7 @@ MonoBehaviour:
   - {fileID: -3947593564855503111}
   - {fileID: -6217976962432492592}
   - {fileID: -5659495328635895347}
-  - {fileID: 5169767721535003786}
-  - {fileID: 2250328294064230268}
-  - {fileID: -1090907574096887057}
-  - {fileID: 6316046832315861510}
   blackboardAsset: {fileID: 11400000, guid: d5662a29726db5e4bbda894445daa9bb, type: 2}
---- !u!114 &2250328294064230268
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 61ec0473594445eea2079193215e9395, type: 3}
-  m_Name: ColorNode
-  m_EditorClassIdentifier: 
-  guid: c8114c5f2031e9448be772152bd5a97b
-  position: {x: 507, y: 399}
-  title: 
-  subRoutine: {fileID: 0}
-  color: {r: 0, g: 0.37826753, b: 1, a: 1}
---- !u!114 &5169767721535003786
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 61ec0473594445eea2079193215e9395, type: 3}
-  m_Name: ColorNode
-  m_EditorClassIdentifier: 
-  guid: ed4e26b02caa4d149a3f2699f9ccbe5a
-  position: {x: 53, y: 399}
-  title: 
-  subRoutine: {fileID: 0}
-  color: {r: 1, g: 0, b: 0, a: 1}
---- !u!114 &6316046832315861510
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 61ec0473594445eea2079193215e9395, type: 3}
-  m_Name: ColorNode
-  m_EditorClassIdentifier: 
-  guid: 13ecc49d54621554f9c6d31ab1c14f47
-  position: {x: 732, y: 399}
-  title: 
-  subRoutine: {fileID: 0}
-  color: {r: 0, g: 1, b: 0.3053434, a: 1}
 --- !u!114 &8524330382828248457
 MonoBehaviour:
   m_ObjectHideFlags: 1

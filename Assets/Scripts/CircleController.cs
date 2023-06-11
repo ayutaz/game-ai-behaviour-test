@@ -37,6 +37,9 @@ public class CircleController : MonoBehaviour,IBehaviourTreeControllerProvider
     private void Update()
     {
         _controller.Update(Time.deltaTime);
+        var theta = Util.ColorUtil.GetAngleFromVectors(Vector3.zero, transform.position);
+        var color = Util.ColorUtil.HSVtoRGB(theta, 100f, 100f);
+        _spriteRenderer.color = new Color(color.R, color.G, color.B, 1.0f);
     }
 
     private void OnDestroy()
