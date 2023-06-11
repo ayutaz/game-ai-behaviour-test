@@ -20,8 +20,8 @@ namespace Node
         }
         protected override bool OnEnterInternal(CircleMoveNode node)
         {
-            _cancellationTokenSource = new CancellationTokenSource();
-            _uniTask = _owner.CircleMoveAsync(node.radius, node.duration, _cancellationTokenSource.Token);
+            CancellationTokenSource = new CancellationTokenSource();
+            UniTask = _owner.CircleMoveAsync(node.radius, node.duration, CancellationTokenSource.Token);
             return true;
         }
     }

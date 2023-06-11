@@ -24,8 +24,8 @@ namespace Node
         /// ノード開始時処理
         /// </summary>
         protected override bool OnEnterInternal(MoveNode node) {
-            _cancellationTokenSource = new CancellationTokenSource();
-            _uniTask = _owner.MoveAsync(node.offset, node.duration, _cancellationTokenSource.Token);
+            CancellationTokenSource = new CancellationTokenSource();
+            UniTask = _owner.MoveAsync(node.offset, node.duration, CancellationTokenSource.Token);
             return true;
         }
     }

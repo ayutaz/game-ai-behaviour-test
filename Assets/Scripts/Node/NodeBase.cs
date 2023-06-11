@@ -1,5 +1,4 @@
 ﻿using System.Threading;
-using Agents;
 using Cysharp.Threading.Tasks;
 using GameAiBehaviour;
 
@@ -11,8 +10,8 @@ namespace Node
 
     public class NodeBaseHandler<T> : ActionNodeHandler<T> where T : NodeBase
     {
-        protected CancellationTokenSource _cancellationTokenSource;
-        protected UniTask _uniTask;
+        protected CancellationTokenSource CancellationTokenSource;
+        protected UniTask UniTask;
 
         /// <summary>
         /// ノード開始時処理
@@ -27,7 +26,7 @@ namespace Node
         /// </summary>
         protected override IActionNodeHandler.State OnUpdateInternal(T node)
         {
-            if (_uniTask.Status == UniTaskStatus.Pending)
+            if (UniTask.Status == UniTaskStatus.Pending)
             {
                 return IActionNodeHandler.State.Running;
             }
@@ -40,8 +39,8 @@ namespace Node
         /// </summary>
         protected override void OnExitInternal(T node)
         {
-            _cancellationTokenSource.Dispose();
-            _cancellationTokenSource = null;
+            CancellationTokenSource.Dispose();
+            CancellationTokenSource = null;
         }
     }
 }

@@ -27,8 +27,8 @@ namespace Node
         }
         protected override bool OnEnterInternal(StableDistanceNode node)
         {
-            _cancellationTokenSource = new CancellationTokenSource();
-            _uniTask = _agent.StableDistanceAsync(_targetTransform,node.distance, _cancellationTokenSource.Token);
+            CancellationTokenSource = new CancellationTokenSource();
+            UniTask = _agent.StableDistanceAsync(_targetTransform,node.distance, CancellationTokenSource.Token);
             return true;
         }
     }
