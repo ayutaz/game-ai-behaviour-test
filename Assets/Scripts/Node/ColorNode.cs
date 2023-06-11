@@ -1,6 +1,4 @@
-﻿using Cysharp.Threading.Tasks;
-using GameAiBehaviour;
-using NaughtyAttributes;
+﻿using NaughtyAttributes;
 using UnityEngine;
 
 namespace DefaultNamespace
@@ -8,7 +6,7 @@ namespace DefaultNamespace
     /// <summary>
     /// 色の設定 Node
     /// </summary>
-    public class ColorNode : HandleableActionNode
+    public class ColorNode : NodeBase
     {
         [Label("色")] public Color color;
     }
@@ -16,13 +14,11 @@ namespace DefaultNamespace
     /// <summary>
     /// 指定した色に変更するNodeHandler
     /// </summary>
-    public class ColorNodeHandler : ActionNodeHandler<ColorNode>
+    public class ColorNodeHandler : NodeBaseHandler<ColorNode>
     {
-        private Agent _owner;
-        private UniTask _uniTask;
         private SpriteRenderer _spriteRenderer;
 
-        public void Setup(Agent owner,SpriteRenderer spriteRenderer)
+        public void Setup(Agent owner, SpriteRenderer spriteRenderer)
         {
             _owner = owner;
             _spriteRenderer = spriteRenderer;
