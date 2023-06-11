@@ -1,7 +1,7 @@
 ﻿using System.Threading;
 using NaughtyAttributes;
 
-namespace DefaultNamespace
+namespace Node
 {
     public class CircleMoveNode : NodeBase
     {

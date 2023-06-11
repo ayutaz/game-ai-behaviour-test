@@ -1,6 +1,7 @@
-﻿using DefaultNamespace;
+﻿using Agents;
 using GameAiBehaviour;
 using NaughtyAttributes;
+using Node;
 using UnityEngine;
 
 /// <summary>
@@ -14,7 +15,7 @@ public class CircleController : MonoBehaviour,IBehaviourTreeControllerProvider
     [SerializeField,Label("試行頻度")]
     private float tickInterval = 1.0f;
 
-    [SerializeField] private Agent agent;
+    [SerializeField] private RotatingObjectAgent rotatingObjectAgent;
     BehaviourTreeController IBehaviourTreeControllerProvider.BehaviourTreeController => _controller;
 
     private SpriteRenderer _spriteRenderer;
@@ -30,7 +31,7 @@ public class CircleController : MonoBehaviour,IBehaviourTreeControllerProvider
     {
         _controller.BindActionNodeHandler<CircleMoveNode,CircleMoveHandler>(handler =>
         {
-            handler.Setup(agent);
+            handler.Setup(rotatingObjectAgent);
         });
     }
 

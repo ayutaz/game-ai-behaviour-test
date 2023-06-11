@@ -1,8 +1,9 @@
 ﻿using System.Threading;
+using Agents;
 using Cysharp.Threading.Tasks;
 using GameAiBehaviour;
 
-namespace DefaultNamespace
+namespace Node
 {
     public abstract class NodeBase : HandleableActionNode
     {
@@ -10,7 +11,7 @@ namespace DefaultNamespace
 
     public class NodeBaseHandler<T> : ActionNodeHandler<T> where T : NodeBase
     {
-        protected Agent _owner;
+        protected RotatingObjectAgent _owner;
         protected CancellationTokenSource _cancellationTokenSource;
         protected UniTask _uniTask;
 
@@ -18,7 +19,7 @@ namespace DefaultNamespace
         /// 初期化処理
         /// </summary>
         /// <param name="owner"></param>
-        public void Setup(Agent owner)
+        public void Setup(RotatingObjectAgent owner)
         {
             _owner = owner;
         }

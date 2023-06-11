@@ -1,7 +1,8 @@
-﻿using NaughtyAttributes;
+﻿using Agents;
+using NaughtyAttributes;
 using UnityEngine;
 
-namespace DefaultNamespace
+namespace Node
 {
     /// <summary>
     /// 色の設定 Node
@@ -18,7 +19,7 @@ namespace DefaultNamespace
     {
         private SpriteRenderer _spriteRenderer;
 
-        public void Setup(Agent owner, SpriteRenderer spriteRenderer)
+        public void Setup(RotatingObjectAgent owner, SpriteRenderer spriteRenderer)
         {
             _owner = owner;
             _spriteRenderer = spriteRenderer;
@@ -29,7 +30,7 @@ namespace DefaultNamespace
         /// </summary>
         protected override bool OnEnterInternal(ColorNode node)
         {
-            Agent.SetColor(_spriteRenderer, node.color);
+            RotatingObjectAgent.SetColor(_spriteRenderer, node.color);
             return true;
         }
     }
