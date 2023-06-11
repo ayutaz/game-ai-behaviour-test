@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: SequencerNode
   m_EditorClassIdentifier: 
   guid: 873203732433a6f47b926ac18230ef1b
-  position: {x: 358.00006, y: 98.67793}
+  position: {x: 310, y: 115}
   title: 
   children:
   - {fileID: 8524330382828248457}
@@ -74,6 +74,24 @@ MonoBehaviour:
   subRoutine: {fileID: 0}
   offset: {x: 0, y: 1, z: 0}
   duration: 1
+--- !u!114 &-3875236157078796652
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dcc30e9be26c4194829508a3a10e34f6, type: 3}
+  m_Name: CircleMoveNode
+  m_EditorClassIdentifier: 
+  guid: 355280fc3d737134baf2a29292e565cf
+  position: {x: 830, y: 50}
+  title: "\u5186\u904B\u52D5"
+  subRoutine: {fileID: 0}
+  radius: 1
+  duration: 1
 --- !u!114 &11400000
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -95,6 +113,7 @@ MonoBehaviour:
   - {fileID: -3947593564855503111}
   - {fileID: -6217976962432492592}
   - {fileID: -5659495328635895347}
+  - {fileID: -3875236157078796652}
   blackboardAsset: {fileID: 11400000, guid: d5662a29726db5e4bbda894445daa9bb, type: 2}
 --- !u!114 &8524330382828248457
 MonoBehaviour:
@@ -129,4 +148,4 @@ MonoBehaviour:
   guid: b1794c0857d22af4c97424106302c017
   position: {x: 358.00006, y: -46.322044}
   title: Root
-  child: {fileID: -7195333700805447320}
+  child: {fileID: -3875236157078796652}

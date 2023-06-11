@@ -26,12 +26,10 @@ public class CircleController : MonoBehaviour,IBehaviourTreeControllerProvider
 
     private void Start()
     {
-        _controller.BindActionNodeHandler<MoveNode,MoveNodeHandler>(handler =>
+        _controller.BindActionNodeHandler<CircleMoveNode,CircleMoveHandler>(handler =>
         {
             handler.Setup(agent);
         });
-        
-        _controller.BindActionNodeHandler<ColorNode,ColorNodeHandler>(handler => handler.Setup(agent,_spriteRenderer));
     }
 
     private void Update()
