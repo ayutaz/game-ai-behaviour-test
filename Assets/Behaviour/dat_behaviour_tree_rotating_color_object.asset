@@ -86,9 +86,9 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 14c4b5c83ab7686489f1b4fa4ca9532e, type: 3}
-  m_Name: dat_behaviour_tree_hoge
+  m_Name: dat_behaviour_tree_rotating_color_object
   m_EditorClassIdentifier: 
-  memo: 
+  memo: RotatingColorObject
   rootNode: {fileID: 8527279488153828387}
   nodes:
   - {fileID: 8527279488153828387}
@@ -117,7 +117,6 @@ MonoBehaviour:
   title: 
   subRoutine: {fileID: 0}
   color: {r: 0, g: 0.37826753, b: 1, a: 1}
-  spriteRenderer: {fileID: 0}
 --- !u!114 &5169767721535003786
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -135,7 +134,6 @@ MonoBehaviour:
   title: 
   subRoutine: {fileID: 0}
   color: {r: 1, g: 0, b: 0, a: 1}
-  spriteRenderer: {fileID: 0}
 --- !u!114 &8524330382828248457
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -150,7 +148,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   guid: 6d6dc7775e832964aba15f6aa40f06e5
   position: {x: -245.73245, y: 293.5}
-  title: RIghtMove
+  title: RightMove
   subRoutine: {fileID: 0}
   offset: {x: 1, y: 0, z: 0}
   duration: 1
