@@ -1,6 +1,6 @@
 # game-ai-behaviour-test
 
-[game-ai-behaviour](https://github.com/ayutaz/game-ai-behaviour-test)を使ったAIの挙動テスト
+[game-ai-behaviour](https://github.com/DaitokuAmy/game-ai-behaviour)を使ったAIの挙動テスト
 
 # Demo
 
