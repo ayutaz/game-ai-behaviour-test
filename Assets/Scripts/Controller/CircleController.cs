@@ -25,7 +25,7 @@ namespace Controller
         private void Awake()
         {
             _spriteRenderer = GetComponent<SpriteRenderer>();
-            _rotatingObjectAgent = GetComponent<RotatingObjectAgent>();
+            _rotatingObjectAgent = new RotatingObjectAgent(transform);
             _controller = new BehaviourTreeController();
             _controller.TickInterval = tickInterval;
             _controller.Setup(behaviourTree);

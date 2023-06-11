@@ -87,7 +87,7 @@ MonoBehaviour:
   m_Name: CircleMoveNode
   m_EditorClassIdentifier: 
   guid: 355280fc3d737134baf2a29292e565cf
-  position: {x: 828, y: 50}
+  position: {x: 732, y: 55}
   title: "\u5186\u904B\u52D5"
   subRoutine: {fileID: 0}
   radius: 1
