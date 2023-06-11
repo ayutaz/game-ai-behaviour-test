@@ -9,26 +9,22 @@ namespace Node
     {
         [Label("保つ距離")] public float distance;
     }
-    
+
     public class StableDistanceNodeHandler : NodeBaseHandler<StableDistanceNode>
     {
-        private Transform _targetTransform;
         private EnemyAgent _agent;
 
-        public void Setup(EnemyAgent agent)
-        {
-            _agent = agent;
-        }
-
-        public void Setup(EnemyAgent enemyAgent, Transform targetTransform)
+        public void Setup(EnemyAgent enemyAgent, Rigidbody2D targetRigidbody2D,
+            Rigidbody2D myselfRigidbody2D, Transform transform)
         {
             _agent = enemyAgent;
-            this._targetTransform = targetTransform;
+            _agent.Setup(targetRigidbody2D, myselfRigidbody2D, transform);
         }
+
         protected override bool OnEnterInternal(StableDistanceNode node)
         {
             CancellationTokenSource = new CancellationTokenSource();
-            UniTask = _agent.StableDistanceAsync(_targetTransform,node.distance, CancellationTokenSource.Token);
+            UniTask = _agent.StableDistanceAsync(node.distance, CancellationTokenSource.Token);
             return true;
         }
     }

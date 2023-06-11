@@ -8,9 +8,11 @@ namespace Player
     {
         [SerializeField] [Label("移動速度")] private float moveSpeed = 1f;
         private DefaultInputActions _input;
+        private Rigidbody2D _rigidbody2D;
 
         private void Awake()
         {
+            _rigidbody2D = GetComponent<Rigidbody2D>();
             _input = new DefaultInputActions();
             _input.Enable();
         }
@@ -19,7 +21,8 @@ namespace Player
         {
             var move = _input.Player.Move.ReadValue<Vector2>();
             var moveDirection = new Vector3(move.x, move.y, 0);
-            transform.position += moveDirection * Time.deltaTime * moveSpeed;
+            var position = transform.position + moveDirection * Time.deltaTime * moveSpeed;
+            _rigidbody2D.MovePosition(position);
         }
     }
 }

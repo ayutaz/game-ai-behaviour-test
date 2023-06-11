@@ -12,5 +12,8 @@
 ## 円運動および角度θによる色の変化
 ![](Docs/move_circle_color.gif)
 
+## プレイヤーが一定距離離れたら、距離を保ち追従
+![](Docs/stable_distance.gif)
+
 # requirements
 * Unity 2021.3.25f1

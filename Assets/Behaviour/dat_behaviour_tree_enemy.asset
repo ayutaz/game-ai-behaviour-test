@@ -1,0 +1,53 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &-5087404633746112880
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fbcd94bd4539402e9400fbb9c80a8772, type: 3}
+  m_Name: StableDistanceNode
+  m_EditorClassIdentifier: 
+  guid: 12223538f903de54fa7d8f07e53480dc
+  position: {x: 0, y: 147}
+  title: 
+  subRoutine: {fileID: 0}
+  distance: 4
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 14c4b5c83ab7686489f1b4fa4ca9532e, type: 3}
+  m_Name: dat_behaviour_tree_enemy
+  m_EditorClassIdentifier: 
+  memo: 
+  rootNode: {fileID: 9032774741950612468}
+  nodes:
+  - {fileID: 9032774741950612468}
+  - {fileID: -5087404633746112880}
+  blackboardAsset: {fileID: 11400000, guid: d5662a29726db5e4bbda894445daa9bb, type: 2}
+--- !u!114 &9032774741950612468
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f20ca020fcdcbff4cb6cf4a92eb703db, type: 3}
+  m_Name: RootNode
+  m_EditorClassIdentifier: 
+  guid: 071aeb723d8ccfb4db7d2d3aa54bd0ba
+  position: {x: 0, y: 0}
+  title: 
+  child: {fileID: -5087404633746112880}
